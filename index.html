@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<head>
+  <title>Portfolio</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./web/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+    #hi
+    {
+      margin-top: 100px;
+    }
+    #name
+    {
+      font-size: 48px;
+      color:darkblue;
+      text-shadow: 4px 4px 4px #aaa;
+    }
+    #aboutme
+    {
+      font-size: 48px;
+      color: dimgray;
+      font-family: 'Tangerine', serif;
+      text-shadow: 4px 4px 4px #aaa;
+    }
+    #aboutmecontant
+    {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+    #PersonalDetails
+    {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    #achievmentstable, #projectpadding,  #references,#fourtab,#aboutmecontant
+    {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    #twotables
+    {
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    #technical
+    {
+      border: 2px solid blue;
+      border-radius: 5px;
+    }
+    #courses
+    {
+      border: 2px solid blue;
+      border-radius: 5px;
+    }
+    .accordian
+    {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    
+    #contact
+    {
+      background-color:sandybrown;
+    }
+    
+    #image
+    {
+      padding-top: 12px;
+      height: 260px;
+      width: 400px;
+    }
+    #main
+    {
+      padding-top: 40px;
+    }
+    .container1 {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+    @media only screen and (max-width: 480px) {
+p { text-align: center; }}
+  </style>
+  <script>
+    $( function() {
+      $( "#accordion" ).accordion();
+    } );
+  </script>
+  <script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+    }
+  </script>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0" style="background-color:aliceblue;">
+  <!-- 
+    <nav class="navbar navbar-expand-sm navbar-dark ftco_navbar ftco-navbar-light site-navbar-target scrolled awake">
+      <a class="navbar-brand" href="#">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="#hi" class="nav-link"><span>Home</span></a></li>
+          <li class="nav-item"><a href="#Personal" class="nav-link active"><span>PersonalDetails</span></a></li>
+          <li class="nav-item"><a href="#achievements1" class="nav-link"><span>Acheievments</span></a></li>
+          
+          <li class="nav-item"><a href="#twotables" class="nav-link"><span>Technical Skills & Courses</span></a></li>
+          <li class="nav-item"><a href="#projectpadding" class="nav-link"><span>Projects</span></a></li>
+          <li class="nav-item"><a href="#moredetails" class="nav-link"><span>More Details</span></a></li>
+          <li class="nav-item"><a href="#references" class="nav-link"><span>Reference</span></a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link"><span>Contact</span></a></li>
+        </ul>
+      </div>
+    </nav> -->
+    
+    <nav class="navbar navbar-expand-sm navbar-dark ftco_navbar ftco-navbar-light site-navbar-target scrolled awake" id="ftco-navbar">
+      <div class="container-fluid">  
+        <a class="navbar-brand" href="index.html">Portfolio</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          
+          
+          <span class="oi oi-menu"></span><div onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="#hi" class="nav-link"><span>Home</span></a></li>
+            <!-- <li class="nav-item"><a href="#Personal" class="nav-link active"><span>PersonalDetails</span></a></li> -->
+            <li class="nav-item"><a href="#achievements1" class="nav-link"><span>Achievements</span></a></li>
+            <li class="nav-item"><a href="#twotables" class="nav-link"><span>Technical Skills & Courses</span></a></li>
+            <li class="nav-item"><a href="#projectpadding" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="#moredetails" class="nav-link"><span>More Details</span></a></li>
+            <li class="nav-item"><a href="#references" class="nav-link"><span>Reference</span></a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link"><span>Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="hi" style="background-color:burlywood;">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <div id="main">
+            <!-- <center><p style="font-size: xx-large;">I am</p></center> -->
+            <center><b><span id="name">Madhurjya Bora</span></b></center>
+            <center><p style="font-size: xx-large;"><span style="color:green;">Managing Director</span></p></center>
+            <center><p style="font-size: xx-large;">Vision Magitech</p></center>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <center><img src="Vision MD.jpg" alt="Italian Trulli" id="image"></center>
+        </div>
+      </div>
+      <!-- <div id="maintext">
+        <center><p style="font-size: xx-large;">I am</p></center>
+        <center><b><span id="name">Madhurjya Bora</span></b></center>
+        <center><p style="font-size: xx-large;">Managing Director At Vision Magitech</p></center>
+      </div> -->
+      <!-- <div id="photos">
+        <img src="Vision MD.jpg" alt="Italian Trulli">
+      </div> -->
+    </div>
+    <div style="text-align: center;" id="home">
+      <p id="aboutme"><b><u>About Me</u></b></p>
+      <hr>
+      <p id="aboutmecontant">I am the Principal Scientist of Vision Magitech.
+        Guwahati,Assam. 
+        Holds Btech in ECE from IIITG. I have over 3 years of experience in Robotics, IoT, Embedded System, Speech Processing, Emotion Recognition. I have an experience of training more than 2000 engineering students</p>
+      </div>
+      <hr>
+      
+      <div class="container">
+        <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Professional Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Academic Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-personal-tab" data-toggle="pill" href="#pills-personal" role="tab" aria-controls="pills-personal" aria-selected="false">Personal Details</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <br>
+            <div class="table table-striped w-auto">
+              <table class="table-responsive-sm">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Insititution/Organization</th>
+                    <th scope="col"><center>Topic</center></th>
+                    <th scope="col">Working Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>IIT Guwahati</td>
+                    <td><ul class="b"> 
+                      <li>Biped Robotics Workshop</li>
+                      <li>We were taught practically the different movements of biped robots and how to control them</li>
+                    </ul></td>
+                    <td>5th Sep’14-6th Sep’14</td>
+                  </tr>
+                  <tr>
+                    <td>North East Frontier Railway, Maligaon, Guwahati</td>
+                    <td><ul>
+                      <li>Industrial training in Signal & Telecomm Department</li>
+                      <li>Different signal processing techniques , use of relays, working of point machines, track circuits and the SM
+                        used to detect a train in the Indian Railways.</li>
+                      </ul></td>
+                      <td>9th June’15 -22nd June 15</td>
+                    </tr>
+                    <tr>
+                      <td>Indian Oil Corporation Limited(IOCL), Guwahati Refinery, Guwahati</td>
+                      <td>
+                        <ul>
+                          <li>Industrial training in Electronics & Instrumentation Department</li>
+                        </ul>
+                      </td>
+                      <td>5th May’16-20th May’16</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <br>
+              <div class="table table-striped w-auto">
+                <div class="table-responsive-sm">
+                  <table class="table">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">Program</th>
+                        <th scope="col">Insititution</th>
+                        <th scope="col">%/CGPA</th>
+                        <th scope="col">Year of Completion</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>B.Tech in ECE</td>
+                        <td>Indian Institute of Information Technology,Guwahati </td>
+                        <td>6.63/10</td>
+                        <td>2017</td>
+                      </tr>
+                      <tr>
+                        <td>XII</td>
+                        <td>Don Bosco Senior Secondary School, Guwahati</td>
+                        <td>86</td>
+                        <td>2013</td>
+                      </tr>
+                      <tr>
+                        <td>X</td>
+                        <td>Don Bosco Senior Secondary School, Guwahati</td>
+                        <td>83.6</td>
+                        <td>2011</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
+              <br>
+              <div class="table table-striped w-auto">
+                <div class="table-responsive-sm">
+                  <table class="table responsive-sm table-striped">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><li><b>Father's Name:-</b></li></td>
+                        <td>Tarun Borah</td>
+                      </tr>
+                      <tr>
+                        <td><li><b>Permanent Address:-</b></li></td>
+                        <td>Maligaon Boripara Bus Stop, Radhika Enclave 3rd floor, Pin:-781012</td>
+                      </tr>
+                      <tr>
+                        <td><li><b>Date of Birth:-</b></li></td>
+                        <td>13/07/1995</td>
+                      </tr>
+                      <tr>
+                        <td><li><b>Language Known:-</b></li></td>
+                        <td>English, Hindi, Assamese</td>
+                      </tr>
+                      <tr>
+                        <td><li><b>Marital Status:-</b></li></td>
+                        <td>Not Married</td>
+                      </tr>
+                      <tr>
+                        <td><li><b>Nationality/Religion:-</b></li></td>
+                        <td>Indian / Hindu</td>
+                      </tr>
+                      <tr>
+                        <td><li><b>Interest & Hobbies :-</b></li></td>
+                        <td>Internet browsing,Badminton,Reading novel and Writing. </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <br>
+              <ul>
+                <li>IEEE International Conference on Signal Processing and Communication(ICSC), Noida, 2016</li>
+                <p>       <b>-“Analysis of Neural Electrical Activities During Elicitation of Human Emotion based on EEG.”</b></p>
+                <br>
+                <li>This work aims to analyze the neural electrical activity inside the brain during elicitation of human
+                  emotional states using Electroencephalographic (EEG) signal. Such analysis offers to understand the
+                  human emotional process in great details .To do so, firstly, the emotional states are categorized in
+                  dimensional space based on valance-arousal scores into four classes: HVHA, HVLA, LVHA, LVLA. The
+                  results show that, for higher valance, the brain active regions in cortical level is same but the Brodmann
+                  areas are different. Such results suggests that there is different sets of neural active regions with
+                  different current densities for different classes of emotional states.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+        <div id="achievements1">
+          <p style="text-align: center;" id="aboutme"><b><u>Acheievments</u></b></p>
+          <hr>
+          <div id="achievmentstable">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td><li>IIT Kharagpur,Robotics Competition,Kshitij 2015</li></td>
+                </tr>
+                <tr>
+                  <td><li>83 rank in city in 10th National Science Olympiad. 2007.</li></td>
+                </tr>
+                <tr>
+                  <td><li>43rd rank in the State in Jigyas Talent Search Examination (JTSE) .2008.</li></td>
+                </tr>
+                <tr>
+                  <td><li>4th prize in “THE BEST TALENT OLYMPIAD 2007”.</li></td>
+                </tr>
+                <tr>
+                  <td><li>Receiptent of “ Chief Minsiter’s Financial Assistance” to meritious students of Assam studying in IIIT in the year 2015 and 2016</li></td>
+                </tr>
+                <tr>
+                  <td><li>Winner of Intra-College Dance Competition, YUVAAN,2016</li></td>
+                </tr>
+                <tr>
+                  <td><li>Third prize holder at Painting Competition, YUVAAN,2015</li></td>
+                </tr>
+                <tr>
+                  <td><li>1st prize holder at Intra college Football Tournament, YUVAAN,2015</li></td>
+                </tr>
+                <tr>
+                  <td><li>1st prize holder in Inter class Cricket Tournament, Don Bosco Senior Secondary School Guwahati. 2011.</li></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <hr>
+        
+        
+        <div class="form-row" id="twotables">
+          <div class="form-group col-md-6" id="technical">
+            
+            <p style="text-align: center;" id="aboutme"><b><u>Technical Skills</u></b></p>
+            <br>
+            <div id="technicalcontent">
+              <span class="border border-primary">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td><b>Database Management System:-</b></td>
+                      <td>Cloud Computing</td>
+                    </tr>
+                    <tr>
+                      <td><b>Programming Languages:-</b></td>
+                      <td>: C, C++</td>
+                    </tr>
+                    <tr>
+                      <td><b>Scripting Languages:-</b></td>
+                      <td> Python, Speech Recognition Using Python, </td>
+                    </tr>
+                    <tr>
+                      <td><b>Hardware Descriptive Language:-</b></td>
+                      <td> Verilog</td>
+                    </tr>
+                    <tr>
+                      <td><b>Software Packages:-</b></td>
+                      <td>MATLAB, EEGLAB.CAD Tool, HFSS</td>
+                    </tr>
+                    <tr>
+                      <td><b>Computer Vision:-</b></td>
+                      <td>Open CV</td>
+                    </tr>
+                    <tr>
+                      <td><b>Hardware Platforms:-</b></td>
+                      <td>Microcontroller (Arduino), Intel Galileo Board, Raspberry Pi, Microprocessors,AVR Microcontroller, Node MCU. </td>
+                    </tr>
+                    <tr>
+                      <td><b>Operating Systems:-</b></td>
+                      <td>Windows XP, Windows 7,Windows 8, Windows 10, Linux</td>
+                    </tr>
+                    <tr>
+                      <td><b>Website designing basics:-</b></td>
+                      <td>HTML,PHP, Basics Of Android App Development and Interfacing with Microcontrollers.</td>
+                    </tr>
+                    <tr>
+                      <td><b>Other Important Skills:-</b></td>
+                      <td>Machine Learning, Deep Learning and Artificial Neural Networks</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </span>
+            </div>
+          </div>
+          <div class="form-group col-md-6"  id="courses">
+            <p style="text-align: center;" id="aboutme"><b><u>Courses</u></b></p>
+            <br>
+            <span class="border border-primary">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td><b>Electronics and Communication:-</b></td>
+                    <td>Digital Communication, Analog Integrated circuits, Control Systems,
+                      Electromagnetics, Digital Signal Processing, Principles of Communication, Semiconductor Devices, Signals and
+                      Systems, Analog Circuits, Basic Electronic Circuits, Electrical Science, Digital Logic and Design, Embedded
+                      Systems*, VLSI*, Microwave Engineering*, Information Theory and Coding* and Communication
+                      Networks*.Mobile Communication, Optical Fibre Communication ,Wireless Sensor Networks, Antenna Theory
+                      And Wave Propagation, Digital Control Systems, Measurement and Instrumentation
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><b>Computer Science:-</b></td>
+                    <td>– Operating Systems, Computer Architecture and Design, Data Structures and Introduction to LINUX </td>
+                  </tr>
+                  <tr>
+                    <td><b>Science:-</b></td>
+                    <td>Differential Equation, Real Analysis, Linear Algebra, Probability and Stochastic Processes, Complex analysis, Physics, Chemistry and Biology</td>
+                  </tr>
+                  <tr>
+                    <td><b>Humanities:-</b></td>
+                    <td>– Microeconomics, Introduction to Linguistics, Sociolinguistics Macroeconomics , Political Science and Science Technology and Society</td>
+                  </tr>
+                  <tr>
+                    <td><b>Labs:-</b></td>
+                    <td>Electrical Circuit Analysis., Digital Logic and Design Lab, Analog Integrated Circuits Lab, Digital Signal
+                      Processing Lab, HFSS., Labview(NI), Communication Lab, Embedded Systems Lab, Microcontrollers and
+                      Microprocessors, Microwave Engineering Lab, VLSI Design Lab(CAD Tool).</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </span>
+            </div>
+          </div>
+          
+          <div id="projectpadding">
+            <p style="text-align: center;" id="aboutme"><b><u>Projects</u></b></p>
+            <hr>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td><li>Emotion Recognition Based on EEG signals.<b>(May 2017 Submitted Research Paper)</b> </li></td>
+                </tr>
+                <tr>
+                  <td><li>Working on EEG based Happiness Detection System.</li>
+                    <p>---To take different subjects and trials and processing the data in EEG Lab tool and then finding out different
+                      electrical activities and accordingly classifying them into four emotional classes.
+                    </p>
+                    <p>---Finding out the Functional Connectivity of Brain.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td><li>IoT Based System Using Iot Board where Different Sensors Data is collected remotely over a network and then
+                    the different data’s are analysed in Various Software and then respectively finding the outputs and various factors.</li></td>
+                  </tr>
+                  <tr>
+                    <td><li>Made a IoT based Girl Protecting System where The girl whenever she is danger in the press of a button she can
+                      be rescued.<b>(Will be applied for patent)</b></li></td>
+                    </tr>
+                    <tr>
+                      <td><li>Image Processing in Computer Vision Using Python in Open CV and by Num Py where various Image Processing
+                        techniques and Algorithms are used.
+                      </li></td>
+                    </tr>
+                    <tr>
+                      <td><li>Developed A Chat Bot Using Raspberry Pi 3 Using Speech Recognition and Python Package. Here Basically the
+                        bot used to Give Answers to Some Asked Questions Using Audio Input by Microphone. This Bot used to give
+                        answers within a Particular Domain.<b>(Will be given for Patent)</b></li></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <li>Developed a GUI Based System in Matlab to detect cancerous cells in MRI Images using Deep learning and
+                            Neural Networks.</li>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <li>Developed a Iot based Automated Dustbin where different sensors were used and remotely we can get
+                              information of the data once dustbin is full of various location to one predefined application.</li>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <li>Designed a System for Factory Safety and Automation where various sensors are interlinked using IOT and also
+                                various robotics technologies were used for automation.</li>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <li>Made a Speech Based Home Automation system where basically with voice a user can control the home
+                                  appliances using Python in Raspberry Pi</li>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <li>Made a Face Recognition Based Attendance System using Python and Open Cv.</li>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <li>Made and Designed An Automated Smart Car Parking System.</li>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <li>Designed a Smart Blind Stick for Blind People with various features which will be made into a product.</li>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <li>Working on A Smart Blind and Guidance App for Blind People using Computer vision where basically a blind
+                                    people can go on his/her route with the help of Maps/ Sound and Object detection algorithms.</li>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <li>Working on Accident Control System for Various Cars in India Roads with the help of Various Microwave
+                                      Sensors and Computer Vision Algorithms.</li>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <li>Working to build a Prototype on Real Time Self Driven Car with the help of Computer Vision Neural Networks.</li>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <li>Developing A System to Prevent discharge of LPG Gas and to a extent prevent gas cylinder blast.</li>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <br>
+                            <div id="moredetails">
+                              <p style="text-align: center;" id="aboutme"><b><u>Some More Details</u></b></p>
+                              <hr>
+                              <div id="accordion" class="accordian">
+                                <h3>Responsibilities:</h3>
+                                <div>
+                                  <p>
+                                    <ul>
+                                      <li><b>Lead Trainer</b> in Training different Engineering Level Students In Embedded Systems
+                                      </li>
+                                      <li>Developing Different Robots for various purposes and uses</li>
+                                      <li><b>Lead Programmer</b> in various sort of Product Making and Development.
+                                      </li>
+                                      <li><b>Embedded Department Head.</b>
+                                      </li>
+                                    </ul></p>
+                                  </div>
+                                  <h3>Positions of Responsibility</h3>
+                                  <div>
+                                    <p>
+                                      <ul>
+                                        <li>Active member of Organising commitee of College Fest, YUVAAN,2015 <b>(1 Year)</b></li>
+                                        <li>
+                                          Active member of Organising commitee of College Fest, YUVAAN,2016 <b>(1 Year)</b>
+                                        </li>
+                                      </ul>
+                                    </p>
+                                  </div>
+                                  <h3>Extra-Curricular Activities</h3>
+                                  <div>
+                                    <p>
+                                      <ul>
+                                        <li>Marketing</li>
+                                        <li>Listening to music , dancing and playing Tabla</li>
+                                        <li>Writing poems and pieces</li>
+                                        <li>Playing football</li>
+                                        <li>Photography</li>
+                                      </ul>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <br>
+                              <div id="references">
+                                <p style="text-align: center;" id="aboutme"><b><u>References</u></b></p>
+                                <hr>
+                                <ul>
+                                  <li><b>Dr.Shovan Barma :</b> Project faculty advisor, Assistant Professor (ECE), Indian Institute of Information
+                                    Technology Guwahati, shovan.barma@gmail.com, (+91) 9007956519, Guwahati, India</li>
+                                    <li><b>Dr.Soumyajit Poddar:</b> faculty advisor, Assistant Professor (ECE), Indian Institute of Information
+                                      Technology Guwahati, poddar18@gmail.com, (+91) 86387 30393, Guwahati, India</li>
+                                    </ul>
+                                  </div>
+                                  <div id="contact">
+                                    <p style="text-align: center;" id="aboutme"><b><u>Contact</u></b></p>
+                                    <hr>
+                                    <div class="form-row">
+                                      <div class="form-group col-md-6">
+                                        <center><p><b><h4 style="color: beige;">Phone No. :-(+91) 7638039360</h4></b></p></center>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <center><p ><b><h4 style="color: beige;">Email ID:- madhurjyabora_99@yahoo.in</h4></b></p></center>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </body>
+                                </html>
